@@ -2,6 +2,12 @@
 
 Atomic authority package for `dma/map`.
 
+`kotoba/capability/dma/map.kotoba` is the native provider helper surface. It
+centralizes descriptor ownership bits and the x86-64 release fence used before
+and after ownership publication. The host-side contract records the required
+TX/RX operation order so a NIC provider cannot silently move the doorbell or
+OWN write ahead of descriptor contents.
+
 - imports: `#{:dma-map}`
 - effects: `#{:memory-access :device-control}`
 - default policy: `:autonomous`
