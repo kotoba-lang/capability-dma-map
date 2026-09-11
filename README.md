@@ -21,5 +21,5 @@ authority: Tamaki must request it explicitly and Kototama must admit
 the sealed envelope.
 
 ```sh
-clojure -M:test
+kbb -M:test
 ```
